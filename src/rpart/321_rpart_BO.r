@@ -194,7 +194,7 @@ EstimarGanancia <- function(x) {
 setwd("~/buckets/b1/")
 
 #cargo MI semilla, que esta en MI bucket
-tabla_semillas <- fread( "~/datasets//mis_semillas.txt" )
+tabla_semillas <- fread( "./datasets/mis_semillas.txt" )
 ksemilla_azar <- tabla_semillas[ 1, semilla ]  # 1 es mi primer semilla
 
 # cargo los datos

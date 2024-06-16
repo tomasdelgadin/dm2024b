@@ -12,7 +12,7 @@ require("randomForest") # solo se usa para imputar nulos
 # "mtry" = 30, cantidad de variables que evalua para hacer un split
 #  generalmente sqrt(ncol(dtrain))
 param <- list(
-  "num.trees" = 400, # cantidad de arboles
+  "num.trees" = 300, # cantidad de arboles
   "mtry" = 13,
   "min.node.size" = 50, # tamaño minimo de las hojas
   "max.depth" = 10 # 0 significa profundidad infinita
@@ -24,7 +24,7 @@ param <- list(
 setwd("~/buckets/b1/") # Establezco el Working Directory
 
 # cargo MI semilla, que esta en MI bucket
-tabla_semillas <- fread( "~/datasets//mis_semillas.txt" )
+tabla_semillas <- fread( "./datasets//mis_semillas.txt" )
 ksemilla_azar <- tabla_semillas[ 1, semilla ]  # 1 es mi primer semilla
 
 

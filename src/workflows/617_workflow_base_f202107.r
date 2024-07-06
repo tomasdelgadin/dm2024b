@@ -311,13 +311,12 @@ HT_tuning_base <- function( pinputexps, bypass=FALSE)
     verbosity = -100,
     max_bin = 31L, # lo debo dejar fijo, no participa de la BO
     is_unbalance = FALSE, #
-    extra_trees = FALSE,
     drop_rate = 0.1, # 0.0 < neg_bagging_fraction <= 1.0
     max_drop = 50, # <=0 means no limit
     skip_drop = 0.5, # 0.0 <= skip_drop <= 1.0
    
      # Parte variable
-    
+    extra_trees = TRUE,
     feature_pre_filter = TRUE,
     max_depth = c( 5L, 30L,  "integer" ), # -1 significa no limitar,  por ahora lo dejo fijo
     min_gain_to_split = c( 0.0, 0.3 ), # min_gain_to_split >= 0.0

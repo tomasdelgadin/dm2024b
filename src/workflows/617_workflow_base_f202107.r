@@ -307,7 +307,6 @@ HT_tuning_base <- function( pinputexps, bypass=FALSE)
     metric = "custom",
     first_metric_only = TRUE,
     boost_from_average = TRUE,
-    feature_pre_filter = FALSE,
     force_row_wise = TRUE, # para reducir warnings
     verbosity = -100,
     max_bin = 31L, # lo debo dejar fijo, no participa de la BO
@@ -319,6 +318,7 @@ HT_tuning_base <- function( pinputexps, bypass=FALSE)
    
      # Parte variable
     
+    feature_pre_filter = TRUE,
     max_depth = c( 5L, 30L,  "integer" ), # -1 significa no limitar,  por ahora lo dejo fijo
     min_gain_to_split = c( 0.0, 0.3 ), # min_gain_to_split >= 0.0
     min_sum_hessian_in_leaf = c( 0.001, 0.1 ), #  min_sum_hessian_in_leaf >= 0.0

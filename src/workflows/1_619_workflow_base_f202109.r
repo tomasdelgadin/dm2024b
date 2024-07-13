@@ -97,7 +97,7 @@ FEintra_base <- function( pinputexps )
   if( -1 == (param_local <- exp_init())$resultado ) return( 0 ) # linea fija
 
 
-  param_local$meta$script <- "/src/wf-etapas/z531_FE_intrames.r"
+  param_local$meta$script <- "/src/wf-etapas/1_531_FE_intrames.r"
 
   param_local$semilla <- NULL  # no usa semilla, es deterministico
 
